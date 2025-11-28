@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20251128193908"
+  },
+  "applications": "*",
+  "documentation": "Beispielhafte Definition der Invoice (Rechnung),\\nda die Beziehung in Textblock existiert.",
+  "fields": [
+    {
+      "fieldName": "invoiceNr",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "invoiceDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Invoice",
+  "relationships": [],
+  "searchEngine": "no"
+}

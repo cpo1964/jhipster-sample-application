@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "textblock": {
+      "home": {
+        "title": "Textblocks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Textblock",
+        "createOrEditLabel": "Create or edit a Textblock",
+        "notFound": "No Textblocks found"
+      },
+      "created": "A new Textblock is created with identifier { param }",
+      "updated": "A Textblock is updated with identifier { param }",
+      "deleted": "A Textblock is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Textblock { id }?"
+      },
+      "detail": {
+        "title": "Textblock"
+      },
+      "id": "ID",
+      "describer": "Describer",
+      "nr": "Nr",
+      "text": "Text",
+      "invoice": "Invoice"
+    }
+  }
+}

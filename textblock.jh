@@ -1,0 +1,38 @@
+/**
+ * Die Textblock-Entität.
+ */
+entity Textblock {
+    describer String maxlength(255)
+    nr String maxlength(255)
+    text String maxlength(255)
+}
+
+/**
+ * Beispielhafte Definition der Invoice (Rechnung),
+ * da die Beziehung in Textblock existiert.
+ */
+entity Invoice {
+    // Fügen Sie hier die Felder der Invoice ein, z.B.:
+    invoiceNr String required unique
+    invoiceDate Instant
+}
+
+// Definition der Beziehung
+// Textblock hat eine Many-to-One-Beziehung zu Invoice.
+// Der Feldname auf der Textblock-Seite ist 'tbInvoice' (wird in JHipster oft auf 'invoice' vereinfacht).
+// Die Beziehung ist optional, da 'nullable=false' in @JoinColumn fehlt (Standard ist True).
+
+relationship ManyToOne {
+    Textblock{invoice} to Invoice
+}
+
+// Konfiguration der Generierung
+// Standardmäßig generiert JHipster das gesamte CRUD-Backend und Frontend.
+// Für die Invoice müsste man die Gegenbeziehung (OneToMany) definieren.
+
+// Beispiel für die Gegenbeziehung (Optional, aber empfohlen für Bidirektionalität):
+/*
+relationship OneToMany {
+    Invoice{textblocks} to Textblock{invoice}
+}
+*/
